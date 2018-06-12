@@ -1,44 +1,109 @@
 <!DOCTYPE html>
 
-<!--
-  Want to customize this website? Learn more about how HTML works:
-  https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML
--->
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+<head>
 
-<html>
-  <head>
-    <title>Hello world!</title>
-    <link rel="stylesheet" href="/styles.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-  </head>
+  <meta charset="UTF-8" />
+  <title>p2p voice journal</title>
+
+  <link rel="stylesheet" href="/static/css/volta.min.css" />
+  <style>
+    .Vlt-main {
+      padding: 20px;
+    }
+  </style>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
 
   <body>
-    <h1>Hello world!</h1>
-
-    <p>
-      This website was created with <a id="beaker-url" title="The Beaker Browser">The Beaker Browser</a>.
-    </p>
-
-    <p>
-      Want to share this website with friends? Share the URL:
-    </p>
-
-    <p id="url"></p>
-
-    <p>
-      Want to learn more about how this website works? <a id="library-url">View the source!</a>
-    </p>
-
-    <button id="change-background-color">
-      Change background color
-    </button>
+    <main class="Vlt-main">
+      <div class="Vlt-grid">
+        <div class="Vlt-col">
+          <div class="Vlt-box Vlt-box--data">
+            <h3>Data Box title</h3>
+            <div class="Vlt-box__data Vlt-box__data">Data</div>
+            <small class="Vlt-box__data-desc">Description</small>
+          </div>
+        </div>
+        <div class="Vlt-col">
+          <div class="Vlt-box Vlt-box--data">
+            <h3>Data Box title</h3>
+            <div class="Vlt-box__data Vlt-box__data">Data</div>
+            <small class="Vlt-box__data-desc">Description</small>
+          </div>
+        </div>
+        <div class="Vlt-col">
+          <div class="Vlt-box Vlt-box--data">
+            <h3>Data Box title</h3>
+            <div class="Vlt-box__data Vlt-box__data">Data</div>
+            <small class="Vlt-box__data-desc">Description</small>
+          </div>
+        </div>
+        <div class="Vlt-col">
+          <div class="Vlt-box Vlt-box--data">
+            <h3>Data Box title</h3>
+            <div class="Vlt-box__data Vlt-box__data">Data</div>
+            <small class="Vlt-box__data-desc">Description</small>
+          </div>
+        </div>
+        <div class="Vlt-grid__separator"></div> <!-- Empty line breaker -->
+        <div class="Vlt-col">
+          <div class="Vlt-card Vlt-card--image">
+            <div class="Vlt-card__image Vlt-card__image--indigo Vlt-card__image--app">
+              <div class="Vlt-card__image__icon">
+                <svg><use xlink:href="/static/symbol/volta-icons.svg#Vlt-icon-voicemail"/></svg>
+              </div>
+            </div>
+            <div class="Vlt-card__content">
+              <h3>Card title</h3>
+              <p>Lorem ipsum</p>
+            </div>
+          </div>
+        </div>
+        <div class="Vlt-col">
+          <div class="Vlt-card Vlt-card--image">
+            <div class="Vlt-card__image Vlt-card__image--green Vlt-card__image--grid">
+              <div class="Vlt-card__image__icon">
+                <svg><use xlink:href="/static/symbol/volta-icons.svg#Vlt-icon-voicemail"/></svg>
+              </div>
+            </div>
+            <div class="Vlt-card__content">
+              <h3>Card title</h3>
+              <p>Lorem ipsum</p>
+            </div>
+          </div>
+        </div>
+        <div class="Vlt-grid__separator"></div> <!-- Empty line breaker -->
+        <div class="Vlt-col">
+          <div class="Vlt-card Vlt-card--image">
+            <div class="Vlt-card__image Vlt-card__image--blue Vlt-card__image--app">
+              <div class="Vlt-card__image__icon">
+                <svg><use xlink:href="/static/symbol/volta-icons.svg#Vlt-icon-voicemail"/></svg>
+              </div>
+            </div>
+            <div class="Vlt-card__content">
+              <h3>Card title</h3>
+              <p>Lorem ipsum</p>
+            </div>
+          </div>
+        </div>
+        <div class="Vlt-col">
+          <div class="Vlt-card Vlt-card--image">
+            <div class="Vlt-card__image Vlt-card__image--orange Vlt-card__image--tech">
+              <div class="Vlt-card__image__icon">
+                <svg><use xlink:href="/static/symbol/volta-icons.svg#Vlt-icon-voicemail"/></svg>
+              </div>
+            </div>
+            <div class="Vlt-card__content">
+              <h3>Card title</h3>
+              <p>Lorem ipsum</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/static/js/svgxuse.min.js"></script>
+    <script src="/static/js/volta.min.js"></script>
   </body>
-
-  <script type="application/javascript" src="script.js"></script>
-
-  <script>
-    console.log('Hello from the console!')
-  </script>
 </html>
