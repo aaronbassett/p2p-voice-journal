@@ -17,35 +17,19 @@
 </head>
 
   <body>
-    <main class="Vlt-main">
+    <main class="Vlt-main" id="voice-journal-app">
       <div class="Vlt-grid">
         <div class="Vlt-col">
-          <div class="Vlt-box Vlt-box--data">
-            <h3>Data Box title</h3>
-            <div class="Vlt-box__data Vlt-box__data">Data</div>
-            <small class="Vlt-box__data-desc">Description</small>
-          </div>
+          <info-peers v-bind:peer-count="peers"></info-peers>
         </div>
         <div class="Vlt-col">
-          <div class="Vlt-box Vlt-box--data">
-            <h3>Data Box title</h3>
-            <div class="Vlt-box__data Vlt-box__data">Data</div>
-            <small class="Vlt-box__data-desc">Description</small>
-          </div>
+          <info-version v-bind:version="version"></info-version>
         </div>
         <div class="Vlt-col">
-          <div class="Vlt-box Vlt-box--data">
-            <h3>Data Box title</h3>
-            <div class="Vlt-box__data Vlt-box__data">Data</div>
-            <small class="Vlt-box__data-desc">Description</small>
-          </div>
+          <info-mtime v-bind:mtime="mtime"></info-mtime>
         </div>
         <div class="Vlt-col">
-          <div class="Vlt-box Vlt-box--data">
-            <h3>Data Box title</h3>
-            <div class="Vlt-box__data Vlt-box__data">Data</div>
-            <small class="Vlt-box__data-desc">Description</small>
-          </div>
+          <info-size v-bind:archive-size="filesize"></info-size>
         </div>
         <div class="Vlt-grid__separator"></div> <!-- Empty line breaker -->
         <div class="Vlt-col">
@@ -105,5 +89,11 @@
     </main>
     <script src="/static/js/svgxuse.min.js"></script>
     <script src="/static/js/volta.min.js"></script>
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/filesize.min.js"></script>
+    <script src="/static/js/vue.js"></script>
+    <script src="/static/js/vue-async-computed.js"></script>
+    <script src="/static/js/vue-components/info-boxes.js"></script>
+    <script src="/static/js/voice-journal.js"></script>
   </body>
 </html>
