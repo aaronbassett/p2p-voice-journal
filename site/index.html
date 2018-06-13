@@ -60,6 +60,33 @@
           </div>
         </div>
       </div>
+
+      <a class="Vlt-btn Vlt-btn--secondary Vlt-js-accordion__trigger" data-accordion="history-accordion">
+        <svg><use xlink:href="/static/symbol/volta-icons.svg#Vlt-icon-calendar"></use></svg>
+        History
+      </a>
+      <div class="Vlt-js-accordion__content" id="history-accordion">
+          <div class="Vlt-table">
+              <table>
+                <thead>
+                  <th>Path</th>
+                  <th>Type</th>
+                  <th>Version</th>
+                </thead>
+                <tbody v-if="archiveHistory">
+                  <tr v-for="revision in archiveHistory">
+                    <td>{{ revision.path }}</td>
+                    <td>
+                      <svg v-if="revision.type == 'del'" class="Vlt-icon Vlt-red"><use xlink:href="/static/symbol/volta-icons.svg#Vlt-icon-bin"></use></svg>
+                      <svg v-if="revision.type == 'put'" class="Vlt-icon Vlt-blue"><use xlink:href="/static/symbol/volta-icons.svg#Vlt-icon-edit"></use></svg>
+                    </td>
+                    <td>{{ revision.version }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+      </div>
+      
     </main>
     <script src="/static/js/svgxuse.min.js"></script>
     <script src="/static/js/volta.min.js"></script>

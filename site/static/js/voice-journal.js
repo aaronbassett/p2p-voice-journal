@@ -29,6 +29,13 @@ var vm = new Vue({
             stat: recording.stat
           }
         })
+      },
+    },
+    archiveHistory: {
+      async get () {
+        const archive = new DatArchive(window.location)
+        const completeHistory = archive.history({start: 0, reverse: true})
+        return completeHistory
       }
     },
     archiveInfo: {
@@ -67,3 +74,6 @@ var vm = new Vue({
     })
   }
 })
+
+
+Volta.init(['accordion'])
