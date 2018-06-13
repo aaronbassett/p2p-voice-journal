@@ -42,7 +42,7 @@ def recordings(recording_url, recording_uuid):
         }
     )
     if recording_response.status_code == 200:
-        recordingfile = f'./recordings/{now.year}/{now.month}/{recording_uuid}.mp3'
+        recordingfile = f'./site/recordings/{now.year}/{now.month}/{recording_uuid}.mp3'
         os.makedirs(os.path.dirname(recordingfile), exist_ok=True)
 
         with open(recordingfile, 'wb') as f:
