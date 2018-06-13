@@ -28,7 +28,7 @@ var vm = new Vue({
             name: recording.name,
             stat: recording.stat
           }
-        })
+        }).reverse()
       },
     },
     archiveHistory: {
