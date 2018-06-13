@@ -7,6 +7,7 @@
   <title>p2p voice journal</title>
 
   <link rel="stylesheet" href="/static/css/volta.min.css" />
+  <link rel="stylesheet" href="/static/css/plyr.css" />
   <style>
     .Vlt-main {
       padding: 20px;
@@ -32,56 +33,29 @@
           <info-size v-bind:archive-size="filesize"></info-size>
         </div>
         <div class="Vlt-grid__separator"></div> <!-- Empty line breaker -->
-        <div class="Vlt-col">
+
+        <div class="Vlt-col Vlt-col--1of2" v-for="recording in recordings">
           <div class="Vlt-card Vlt-card--image">
-            <div class="Vlt-card__image Vlt-card__image--indigo Vlt-card__image--app">
+            <div class="Vlt-card__image" v-bind:class="recording.stat.color">
               <div class="Vlt-card__image__icon">
                 <svg><use xlink:href="/static/symbol/volta-icons.svg#Vlt-icon-voicemail"/></svg>
               </div>
             </div>
             <div class="Vlt-card__content">
-              <h3>Card title</h3>
-              <p>Lorem ipsum</p>
-            </div>
-          </div>
-        </div>
-        <div class="Vlt-col">
-          <div class="Vlt-card Vlt-card--image">
-            <div class="Vlt-card__image Vlt-card__image--green Vlt-card__image--grid">
-              <div class="Vlt-card__image__icon">
-                <svg><use xlink:href="/static/symbol/volta-icons.svg#Vlt-icon-voicemail"/></svg>
-              </div>
-            </div>
-            <div class="Vlt-card__content">
-              <h3>Card title</h3>
-              <p>Lorem ipsum</p>
-            </div>
-          </div>
-        </div>
-        <div class="Vlt-grid__separator"></div> <!-- Empty line breaker -->
-        <div class="Vlt-col">
-          <div class="Vlt-card Vlt-card--image">
-            <div class="Vlt-card__image Vlt-card__image--blue Vlt-card__image--app">
-              <div class="Vlt-card__image__icon">
-                <svg><use xlink:href="/static/symbol/volta-icons.svg#Vlt-icon-voicemail"/></svg>
-              </div>
-            </div>
-            <div class="Vlt-card__content">
-              <h3>Card title</h3>
-              <p>Lorem ipsum</p>
-            </div>
-          </div>
-        </div>
-        <div class="Vlt-col">
-          <div class="Vlt-card Vlt-card--image">
-            <div class="Vlt-card__image Vlt-card__image--orange Vlt-card__image--tech">
-              <div class="Vlt-card__image__icon">
-                <svg><use xlink:href="/static/symbol/volta-icons.svg#Vlt-icon-voicemail"/></svg>
-              </div>
-            </div>
-            <div class="Vlt-card__content">
-              <h3>Card title</h3>
-              <p>Lorem ipsum</p>
+              <audio id="player" controls>
+                  <source v-bind:src="'/recordings/' + recording.name" type="audio/mp3">
+              </audio>
+              <p>
+                <span class="Vlt-badge">
+                  created: {{ recording.stat.createdTime }}
+                </span>
+                <span class="Vlt-badge">
+                  size: {{ recording.stat.humanSize }}
+                </span>
+                <span class="Vlt-badge" v-bind:class="{'Vlt-badge--red': recording.stat.missingBlocks}">
+                  blocks: {{ recording.stat.downloaded }}/{{ recording.stat.blocks }}
+                </span>
+              </p>
             </div>
           </div>
         </div>
@@ -91,6 +65,7 @@
     <script src="/static/js/volta.min.js"></script>
     <script src="/static/js/moment.min.js"></script>
     <script src="/static/js/filesize.min.js"></script>
+    <script src="/static/js/plyr.js"></script>
     <script src="/static/js/vue.js"></script>
     <script src="/static/js/vue-async-computed.js"></script>
     <script src="/static/js/vue-components/info-boxes.js"></script>
