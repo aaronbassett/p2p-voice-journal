@@ -76,4 +76,8 @@ var vm = new Vue({
 })
 
 
-Volta.init(['accordion'])
+Volta.init(['accordion', 'flash'])
+
+if(!window['DatArchive']) {
+  Volta.flash.show('critical-not-dat', 15000);
+}
