@@ -18,3 +18,13 @@ To view the example site you will need a `dat://` capable browser such as
 [Beaker](https://beakerbrowser.com/)
 
 [dat://8354c381e6f859e57ef6979af7e287acf3d528d8463f54774c36b6bc8aa514d6/](dat://8354c381e6f859e57ef6979af7e287acf3d528d8463f54774c36b6bc8aa514d6/)
+
+Learn More
+----------
+
+Read more about this example code in the [Nexmo Blog](https://www.nexmo.com/?p=21316&preview=true) post; [Creating a Voice Journal for the next web](https://www.nexmo.com/blog/2018/06/19/next-web-voice-journal-python-vue-javascript-dr)
+
+License
+-------
+
+Volta Design System copyright Vonage (all rights reserved). Except where otherwise stated, this code is MIT licensed.
